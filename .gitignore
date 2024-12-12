@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignore all 3D models in the public folder
+public/*.3d
+public/*.obj
+public/*.fbx
+
+# Ignore 3D model files
+/public/assets/scene.bin
+/public/assets/scene.gltf
