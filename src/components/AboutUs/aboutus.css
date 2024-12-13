@@ -19,4 +19,10 @@
     background-image: linear-gradient(90deg, rgb(0, 0, 0) var(--highlight-offset), #f0f0f0 var(--highlight-offset));
   }
   
-  
+  @media screen and (max-width: 768px) {
+  .paragraph {
+    font-size: 6vw; 
+    line-height: 150%; 
+    margin: 20vh auto; 
+  }
+}
