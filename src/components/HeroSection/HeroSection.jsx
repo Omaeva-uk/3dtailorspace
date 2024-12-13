@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, useAnimations } from "@react-three/drei";
 import * as THREE from "three";
 import { Link, useLocation } from "react-router-dom";
-import "./HeroSection.css";
+import "./herosection.css";
 import "../NavBar/navbar.css";
 import { HashLink } from "react-router-hash-link";
 
