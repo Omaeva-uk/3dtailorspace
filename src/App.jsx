@@ -4,12 +4,12 @@ import { PrivacyPolicy } from "./pages";
 import CookieConsent from "react-cookie-consent";
 
 const App = () => {
-  const handleScroll = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const handleScroll = (id) => {
+  //   const section = document.getElementById(id);
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
   return (
     <div>
       <CookieConsent
