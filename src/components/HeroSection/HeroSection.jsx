@@ -180,7 +180,7 @@ const HeroSection = ({ id }) => {
         </p>
       </div>
       <div className="absolute top-0 left-0 w-full h-full z-0">
-        {/* <ThreeDModel /> */}
+        <ThreeDModel />
       </div>
     </div>
   );
