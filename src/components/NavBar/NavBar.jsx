@@ -1,21 +1,26 @@
 import { useState } from "react";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [mobileNav, setNobileNav] = useState(false);
 
   return (
     <nav className="flex max-lg:p-5 justify-between items-center relative">
-      <div className="w-14 md:w-20">
-        <img
-          src="/assets/tailorspace-nav-logo.svg"
-          alt="Tailorspace logo"
-          className="w-full"
-        />
-      </div>
+      <Link to="/">
+        <div className="w-14 md:w-20">
+          <img
+            src="/assets/tailorspace-nav-logo.svg"
+            alt="Tailorspace logo"
+            className="w-full"
+          />
+        </div>
+      </Link>
+      
       {/* Desktop menu */}
       <div className="hidden lg:block">
         <ul className=" flex justify-between items-center navItems-wrapper ">
+        
           <li className="home-active">Home</li>
           <li>About Us</li>
           <li>Join Us</li>

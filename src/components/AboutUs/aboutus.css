@@ -1,0 +1,22 @@
+.paragraph {
+    color: #c81a1a;
+    font-weight: 700;
+    font-size: 3vw;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 40vh auto;
+    line-height: 140%;
+    text-align: center;
+  }
+  
+  .line {
+    position: relative;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    --highlight-offset: 0%;
+    background-image: linear-gradient(90deg, rgb(0, 0, 0) var(--highlight-offset), #f0f0f0 var(--highlight-offset));
+  }
+  
+  

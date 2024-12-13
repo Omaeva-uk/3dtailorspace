@@ -1,0 +1,11 @@
+.privacy-nav-bg{
+    background: rgb(112, 193, 227);
+    background: linear-gradient(
+            236deg,
+            rgba(112, 193, 227, 1) 0%,
+            rgba(180, 185, 188, 1) 62%,
+            rgba(255, 255, 255, 1) 100%
+        );
+        border-radius: 30px;
+        padding: 15px;
+}

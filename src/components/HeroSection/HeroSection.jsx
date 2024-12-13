@@ -5,35 +5,40 @@ import * as THREE from "three";
 import { Link, useLocation } from "react-router-dom";
 import "./HeroSection.css";
 import "../NavBar/navbar.css";
+import { HashLink } from "react-router-hash-link";
 
 // NavBar
 const NavBar = () => {
   const [mobileNav, setMobileNav] = useState(false);
+  const [activeNavItem, setactiveNavItem] = useState();
+  console.log(activeNavItem);
   const location = useLocation();
 
-  const handleNavigation = (e, id) => {
-    e.preventDefault();
-    if (location.pathname === "/" && onScroll) {
-      onScroll(id);
-    } else {
-      setTimeout(() => onScroll(id), 100);
-    }
-  };
+  // const handleNavigation = (e, id) => {
+  //   e.preventDefault();
+  //   if (location.pathname === "/" && onScroll) {
+  //     onScroll(id);
+  //   } else {
+  //     setTimeout(() => onScroll(id), 100);
+  //   }
+  // };
 
   return (
     <nav className="flex max-lg:p-5 justify-between items-center relative">
-      <div className="w-14 md:w-20">
-        <img
-          src="/assets/tailorspace-nav-logo.svg"
-          alt="Tailorspace logo"
-          className="w-full"
-        />
-      </div>
+        <Link>
+          <div className="w-14 md:w-20">
+            <img
+              src="/assets/tailorspace-nav-logo.svg"
+              alt="Tailorspace logo"
+              className="w-full"
+            />
+          </div>
+        </Link>
 
       {/* Desktop  */}
       <div className="hidden lg:block">
         <ul className="flex justify-between items-center navItems-wrapper">
-          <li>
+          {/* <li>
             <Link to="/" onClick={(e) => handleNavigation(e, "hero-section")}>
               Home
             </Link>
@@ -43,7 +48,10 @@ const NavBar = () => {
           </Link>
           <Link to="/" onClick={(e) => handleNavigation(e, "join-us")}>
             Join Us
-          </Link>
+          </Link> */}
+          <HashLink to="/#home" onClick={(e) => setactiveNavItem(e.target)}><li className="home-active">Home</li></HashLink>
+          <HashLink to="/#about-us" onClick={(e) => setactiveNavItem(e.target)}><li className="hover:text-white hover:font-bold">About Us</li></HashLink>
+          <HashLink to="/#join-us" onClick={(e) => setactiveNavItem(e.target)}><li className="hover:text-white hover:font-bold">Join Us</li></HashLink>
         </ul>
       </div>
 
@@ -84,6 +92,9 @@ const NavBar = () => {
 // 3D Model
 function Model() {
   const { scene, animations } = useGLTF("/scene.gltf");
+  // const { scene, animations } = useGLTF("https://3dtailorspace.s3.eu-north-1.amazonaws.com/scene.gltf");
+  console.log("Model loaded:", scene);
+  console.log("hello");
   const { actions } = useAnimations(animations, scene);
 
   // clean up a mesh
@@ -141,7 +152,7 @@ function ThreeDModel() {
         <Suspense>
           <Model />
         </Suspense>
-        <OrbitControls enableZoom={true} minDistance={1} maxDistance={10} />
+        <OrbitControls enableZoom={false} minDistance={1} maxDistance={10} />
       </Canvas>
     </div>
   );
@@ -158,8 +169,8 @@ const HeroSection = ({ id }) => {
         id={id}
         className="relative z-10 mt-12 lg:mt-16 flex flex-col items-center text-center"
       >
-        <h1 className="flex justify-center items-center text-[54px] lg:text-[84px] font-semibold text-white">
-          Anything <span className="mx-2">⚡</span> Into 3D
+        <h1 className="flex max-sm:flex-col justify-center items-center max-sm:items-start text-[44px] md:text-[54px] lg:text-[84px] relative font-semibold text-white">
+          Anything <span className="mx-2 max-sm:absolute max-sm:-right-[33px] max-sm:bottom-0">⚡</span> Into 3D
         </h1>
         <p className="text-center mt-4 max-w-md text-white">
           Transform your ideas into stunning 3D models with our cutting-edge
@@ -167,7 +178,7 @@ const HeroSection = ({ id }) => {
         </p>
       </div>
       <div className="absolute top-0 left-0 w-full h-full z-0">
-        <ThreeDModel />
+        {/* <ThreeDModel /> */}
       </div>
     </div>
   );

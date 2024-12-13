@@ -29,5 +29,5 @@ public/*.obj
 public/*.fbx
 
 # Ignore 3D model files
-/public/assets/scene.bin
-/public/assets/scene.gltf
+# /public/assets/scene.bin
+# /public/assets/scene.gltf
