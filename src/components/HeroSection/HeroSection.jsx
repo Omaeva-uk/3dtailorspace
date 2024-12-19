@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, useAnimations } from "@react-three/drei";
 import * as THREE from "three";
 import { Link, useLocation } from "react-router-dom";
-import "./HeroSection.css";
+import "./herosection.css";
 import "../NavBar/navbar.css";
 import { HashLink } from "react-router-hash-link";
 
@@ -95,6 +95,8 @@ const NavBar = () => {
 // 3D Model
 function Model() {
   const { scene, animations } = useGLTF("/scene.gltf");
+  // const { scene, animations } = useGLTF("/assets/scene.gltf");
+
   // const { scene, animations } = useGLTF("https://3dtailorspace.s3.eu-north-1.amazonaws.com/scene.gltf");
   console.log("Model loaded:", scene);
   console.log("hello");
@@ -181,7 +183,7 @@ const HeroSection = ({ id }) => {
         </p>
       </div>
       <div className="absolute top-0 left-0 w-full h-full z-0">
-        {/* <ThreeDModel /> */}
+        <ThreeDModel />
       </div>
     </div>
   );
