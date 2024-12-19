@@ -68,7 +68,7 @@ const NavBar = () => {
             <HashLink to="/#home" ><li >Home</li></HashLink>
              <HashLink to="/#about-us" ><li >About Us</li></HashLink>
              <HashLink to="/#join-us" ><li >Join Us</li></HashLink>
-             <HashLink to="/#contact-us"><li>Contact Us</li></HashLink>
+             <HashLink to="/#join-us"><li>Contact Us</li></HashLink>
           </ul>
         </div>
       )}
