@@ -36,7 +36,7 @@ const AboutUs = ({ id }) => {
   return (
     <section className="actual-section" id={id}>
       <div className="paragraph">
-        <p>"Welcome to a realm where imagination transforms into reality. At 3D Tailor Space, we’re on the brink of unveiling something extraordinary. Stay with us, and prepare to witness innovation like never before. The future of design is just around the corner. Stay curious."</p>
+        <p className="">"Welcome to a realm where imagination transforms into reality. At 3D Tailor Space, we’re on the brink of unveiling something extraordinary. Stay with us, and prepare to witness innovation like never before. The future of design is just around the corner. Stay curious."</p>
       </div>
     </section>
   );

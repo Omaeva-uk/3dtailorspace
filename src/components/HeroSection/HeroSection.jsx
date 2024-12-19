@@ -49,7 +49,7 @@ const NavBar = () => {
           <Link to="/" onClick={(e) => handleNavigation(e, "join-us")}>
             Join Us
           </Link> */}
-          <HashLink to="/#home" onClick={(e) => setactiveNavItem(e.target)}><li className="home-active">Home</li></HashLink>
+          <HashLink to="/#home" onClick={(e) => setactiveNavItem(e.target)}><li className="hover:text-white hover:font-bold">Home</li></HashLink>
           <HashLink to="/#about-us" onClick={(e) => setactiveNavItem(e.target)}><li className="hover:text-white hover:font-bold">About Us</li></HashLink>
           <HashLink to="/#join-us" onClick={(e) => setactiveNavItem(e.target)}><li className="hover:text-white hover:font-bold">Join Us</li></HashLink>
         </ul>
@@ -74,12 +74,15 @@ const NavBar = () => {
       )}
 
       <div className="max-lg:hidden">
-        <button className="btn">
-          Contact Us{" "}
-          <span>
-            <i className="fa-solid fa-arrow-right"></i>
-          </span>
-        </button>
+        <HashLink to="/#join-us" >
+          <button className="btn">
+            Contact Us{" "}
+            <span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </span>
+          </button>
+        </HashLink>
+       
       </div>
 
       <div className="lg:hidden" onClick={() => setMobileNav((prev) => !prev)}>

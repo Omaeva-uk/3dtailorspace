@@ -9,6 +9,12 @@
     line-height: 140%;
     text-align: center;
   }
+
+  @media (max-width: 600px){
+    .paragraph{
+      font-size: 6vw;
+    }
+  }
   
   .line {
     position: relative;

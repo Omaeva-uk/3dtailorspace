@@ -22,3 +22,9 @@
     right: 0;
     opacity: 0.2;
 }
+
+@media (min-width: 1700px){
+    .above-1500{
+        font-size: 30px;
+    }
+}

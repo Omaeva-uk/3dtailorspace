@@ -67,7 +67,7 @@
     .cta-h2{
         top: 20%;
         left: 10%;
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .cta-form{
@@ -96,5 +96,25 @@
     .cta-info{
         bottom: 18%;
         right: 20%;
+    }
+}
+@media (min-width: 1700px){
+
+    .cta-h2{
+        top: 20%;
+        left: 20%;
+        font-size: 50px;
+    }
+
+    .cta-form{
+        bottom: 20%;
+        left: 20%;
+        font-size: 30px;
+    }
+
+    .cta-info{
+        bottom: 18%;
+        right: 20%;
+        font-size: 28px;
     }
 }
