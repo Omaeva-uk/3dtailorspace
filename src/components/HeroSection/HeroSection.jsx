@@ -65,10 +65,10 @@ const NavBar = () => {
             >
               <i className="fa-solid fa-x"></i>
             </li>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Join Us</li>
-            <li>Contact Us</li>
+            <HashLink to="/#home" ><li >Home</li></HashLink>
+             <HashLink to="/#about-us" ><li >About Us</li></HashLink>
+             <HashLink to="/#join-us" ><li >Join Us</li></HashLink>
+             <HashLink to="/#contact-us"><li>Contact Us</li></HashLink>
           </ul>
         </div>
       )}
