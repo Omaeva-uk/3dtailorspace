@@ -37,6 +37,7 @@ const Footer = () => {
         </div>
         <p className="footer-tailor-lg">Tailor</p>
         <p className="footer-space-lg">Space</p>
+        {/* hellogit  */}
     </div>
   )
 }
